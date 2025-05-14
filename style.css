@@ -58,6 +58,8 @@ ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .list-group-item span:last-child{
