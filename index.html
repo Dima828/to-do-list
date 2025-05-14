@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Заметки</h1>
+        <input type="text"
+            class="form-control"
+            placeholder="Введите название"
+            id="title"
+        />
+        <button class="btn btn-outline-info" id="create">Добавить</button>
+
+        <ul class="list-group list-group-flush" id="list">
+            <li class="list-group-item">
+                <span>Название</span>
+                <span>
+                    <span class="btn btn-small btn-success">&check;</span>
+                    <span class="btn btn-small btn-danger">&times;</span>
+                </span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
