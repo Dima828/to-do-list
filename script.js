@@ -2,7 +2,7 @@ const inputElement = document.getElementById('title')
 const createBtn = document.getElementById('create')
 const listElement = document.getElementById('list')
 
-const notes = [
+const notes = JSON.parse(localStorage.getItem('notes')) ||[
     {
         title: '123',
         complited: false,
@@ -13,6 +13,10 @@ const notes = [
     },
 ]
 
+function saveLocal(){
+    localStorage.setItem('notes', JSON.stringify(notes))
+}
+
 function render(){
     listElement.innerHTML = ''
     if(notes.length == 0){
@@ -21,6 +25,7 @@ function render(){
     for(let i = 0; i < notes.length; i++){
         listElement.insertAdjacentHTML('beforeend', getNoteTemplate(notes[i], i))
     }
+    saveLocal()
 }
 
 render()
